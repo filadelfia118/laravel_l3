@@ -9,7 +9,8 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function index(){
-        $users = User::all();
+        $users = User::paginate(5);//aceasta extrage cat e5 
+        //$users = User::all(); aceasta extrage toti utilizatorii
         return view('users.index',['users'=>$users]);
     }
 

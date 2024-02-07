@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function phones():HasMany{
         return $this ->hasMany(Phone::class);
     }
+
+    public function fullName(){
+        return $this->name;
+    }
 }
